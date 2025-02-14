@@ -1,3 +1,15 @@
+;;; spicy-ts-mode.el --- Basic major-mode for Spicy using tree-sitter-spicy -*- lexical-binding: t -*-
+
+;;; Commentary:
+;; This is a very rough major-mode for Emacs to enable code highlighting.  It
+;; depends on tree-sitter-spicy being installed in a way that Emacs can use
+;; it.  Mastering Emacs has a useful guide for how to set that up.
+;;
+;; It's most-definitely missing some keywords here and there, and I'll probably
+;; be updating it as I get more into Spicy.
+
+;;; Code:
+
 (defcustom spicy-indent-offset 4
   "Number of spaces for each indentation step in `spicy-ts-mode'."
   :version "0.1"
@@ -113,7 +125,7 @@
   "Spicy font-lock settings.")
 
 (define-derived-mode spicy-ts-mode prog-mode "Spicy"
-  "A mode for the Spicy programming language"
+  "A mode for the Spicy programming language."
   (unless (treesit-ready-p 'spicy)
     (error "Tree-sitter for Spicy is not available"))
 
@@ -132,3 +144,7 @@
   (treesit-major-mode-setup))
 
 (provide 'spicy-ts-mode)
+
+(provide 'spicy-ts-mode)
+
+;;; spicy-ts-mode.el ends here
