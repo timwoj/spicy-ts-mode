@@ -145,6 +145,4 @@
 
 (provide 'spicy-ts-mode)
 
-(provide 'spicy-ts-mode)
-
 ;;; spicy-ts-mode.el ends here
